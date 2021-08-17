@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1>All brains</h1>
+      <ul class="list-group">
+        <% @brains.each do |brain| %>
+          <li class="list-group-item">
+            <%= link_to brain.name, brain_path(brain) %>
+          </li>
+        <% end %>
+      </ul>
+      <%= link_to "Add a new Brain", new_brain_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>
