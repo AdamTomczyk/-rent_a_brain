@@ -38,7 +38,7 @@ class BrainsController < ApplicationController
   # DELETE /brains/1
   def destroy
     @brain.destroy
-    redirect_to brains_url, notice: 'Brain was successfully destroyed.'
+    redirect_to brains_path, notice: 'Brain was successfully destroyed.'
   end
 
   private
