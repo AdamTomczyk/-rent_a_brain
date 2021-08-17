@@ -1,0 +1,29 @@
+
+<%= simple_form_for(@brain) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+  </div>
+
+  <div class="form-inputs">
+    <%= f.input :description %>
+  </div>
+
+  <div class="form-inputs">
+    <%= f.input :price_per_minute %>
+  </div>
+
+  <div class="form-inputs">
+    <%= f.input :iq %>
+  </div>
+
+  <div class="form-inputs">
+    <%= f.input :eq %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

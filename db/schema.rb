@@ -11,6 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
+
 ActiveRecord::Schema.define(version: 2021_08_17_121940) 
 
 
@@ -27,7 +28,8 @@ ActiveRecord::Schema.define(version: 2021_08_17_121940)
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.float "rating"
-    t.bigint "user_id"
+
+    t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_brains_on_user_id"
   end
 
@@ -54,6 +56,8 @@ ActiveRecord::Schema.define(version: 2021_08_17_121940)
   end
 
 
+
   add_foreign_key "brains", "users"
+
   add_foreign_key "reviews", "brains"
 end
