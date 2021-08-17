@@ -10,10 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 2021_08_16_152718) do
+
 ActiveRecord::Schema.define(version: 2021_08_16_151517) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+
+  create_table "brains", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "iq"
+    t.integer "eq"
+    t.integer "price_per_minute"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.float "rating"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "comment"
+    t.integer "rating"
+    t.bigint "brain_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["brain_id"], name: "index_reviews_on_brain_id"
+  end
+
+  add_foreign_key "reviews", "brains"
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,5 +52,6 @@ ActiveRecord::Schema.define(version: 2021_08_16_151517) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
 
 end
