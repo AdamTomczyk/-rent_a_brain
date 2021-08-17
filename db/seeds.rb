@@ -5,11 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Brain.create!(
+  user_1 = User.create!(
+  email: "adam.tomczyk@rentabrain.com",
+  fullname: "Adam Tomczyk",
+  password: "adam123"
+)
+
+  Brain.create!(
   name: "Johann",
   description: "This elementary school level brain makes you enjoy life again.",
   iq: 68,
   eq: 30,
   price_per_minute: 1300,
-  rating: 3
+  rating: 3,
+  user_id: user_1.id
 )
