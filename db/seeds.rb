@@ -5,11 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all!
+Brain.destroy_all!
+# create users
+
+#User.create!()
+
+# User.all iteration
+
 Brain.create!(
-  name: "Johann",
-  description: "This elementary school level brain makes you enjoy life again.",
-  iq: 68,
-  eq: 30,
-  price_per_minute: 1300,
-  rating: 3
+name: "Johann",
+description: "This elementary school level brain makes you enjoy life again.",
+iq: 68,
+eq: 30,
+price_per_minute: 1300,
+rating: 3
 )
