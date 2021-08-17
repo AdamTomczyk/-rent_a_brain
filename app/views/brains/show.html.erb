@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @brain.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @brain.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @brain.price_per_minute %>
+</p>
+
+<p>
+  <strong>IQ:</strong>
+  <%= @brain.iq %>
+</p>
+
+<p>
+  <strong>EQ:</strong>
+  <%= @brain.eq %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <p> to be added: @brain.user_id </p>>
+</p>
+
+
+<%= link_to 'Edit', edit_brain_path(@brain) %> |
+<%= link_to 'Back', brains_path %>
