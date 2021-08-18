@@ -1,5 +1,10 @@
 class BookingsController < ApplicationController
   require "date"
+
+  def index
+    @bookings = Booking.where(user_id: current_user)
+  end
+
   def new
     # we need @brain in our `simple_form_for`
     @brain = Brain.find(params[:brain_id])
@@ -24,7 +29,7 @@ class BookingsController < ApplicationController
     @booking.end_date = @second_date
     @booking.availability = false
     @booking.save
-    redirect_to brain_path(@brain)
+    redirect_to bookings_path
   end
 
   private
