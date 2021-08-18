@@ -37,18 +37,16 @@
   <%= @brain.eq %>
 </p>
 
-<<<<<<< HEAD
+
 <p>
   <strong>User:</strong>
   <p> to be added: @brain.user_id </p>
 </p>
-=======
 
->>>>>>> 70f02e0b3ede7f0fe346f2ccc20bef95eff6891f
 
 
 <%= link_to 'Edit', edit_brain_path(@brain) %> |
-<<<<<<< HEAD
+
 <%= link_to 'Back', brains_path %>
 
 <script>
@@ -91,12 +89,12 @@ var myChart = new Chart(ctx, {
 });
 
 </script>
-=======
-<%= link_to 'Back', brains_path %> |
-<<<<<<< HEAD
+
 <%= link_to 'delete this brain', brain_path(@brain), method: :delete,  data: { confirm: 'Are you sure you want to delete this brain?' }  %>
->>>>>>> 4d1789090623ef3357942679688fb16038cf11e8
-=======
+
 <%= link_to 'delete this brain', brain_path(@brain), method: :delete,  data: { confirm: 'Are you sure you want to delete this brain?' }  %> |
 <%= link_to 'Book this brain', new_brain_booking_path(@brain) %>
->>>>>>> 70f02e0b3ede7f0fe346f2ccc20bef95eff6891f
+
+<%= link_to 'delete this brain', brain_path(@brain), method: :delete,  data: { confirm: 'Are you sure you want to delete this brain?' }  %> |
+<%= link_to 'Book this brain', new_brain_booking_path(@brain) %>
+
