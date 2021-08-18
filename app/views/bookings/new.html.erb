@@ -1,8 +1,6 @@
 <%= simple_form_for [ @brain, @booking ] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
-  <%= f.input :availability %>
-  <%= @total %>
   <%= f.submit "Book this brain", class: "btn btn-primary", data: { confirm: 'Are you sure you want to book this brain?' } %>
 
 <% end %>
