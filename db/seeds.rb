@@ -17,7 +17,7 @@ Brain.destroy_all
 
 user1 = User.create!(
   email: "adam@rentabrain.com",
-  fullname: "Adam Tomczyk",
+  fullname: "Orange King",
   password: "adam123"
 )
 
