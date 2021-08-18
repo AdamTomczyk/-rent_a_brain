@@ -25,12 +25,10 @@
   <%= @brain.eq %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <p> to be added: @brain.user_id </p>>
-</p>
+
 
 
 <%= link_to 'Edit', edit_brain_path(@brain) %> |
 <%= link_to 'Back', brains_path %> |
-<%= link_to 'delete this brain', brain_path(@brain), method: :delete,  data: { confirm: 'Are you sure you want to delete this brain?' }  %>
+<%= link_to 'delete this brain', brain_path(@brain), method: :delete,  data: { confirm: 'Are you sure you want to delete this brain?' }  %> |
+<%= link_to 'Book this brain', new_brain_booking_path(@brain) %>

@@ -6,21 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-User.destroy_all!
-Brain.destroy_all!
+# User.destroy_all
+Brain.destroy_all
 # create users
 
-#User.create!()
+# User.create!()
 
 # User.all iteration
 
-=======
+
   user_1 = User.create!(
-  email: "adam.tomczyk@rentabrain.com",
-  fullname: "Adam Tomczyk",
-  password: "adam123"
-)
+  email: "may@rentabrain.com",
+  fullname: "May May",
+  password: "may123")
 
   Brain.create!(
   name: "Johann",

@@ -8,5 +8,5 @@ class User < ApplicationRecord
   #validates :password, length: { maximum: 8 }, presence: true
 
   has_many :brains
-  #has_many :bookings
+  has_many :bookings
 end
