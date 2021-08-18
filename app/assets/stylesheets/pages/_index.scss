@@ -29,6 +29,11 @@ a {
 }
 
 
+.notice{
+  padding: 0;
+  margin: 0;
+}
+
 @import "home";
 @import "show.scss";
 @import "../components/navbar"

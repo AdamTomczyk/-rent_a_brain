@@ -21,6 +21,7 @@ class BrainsController < ApplicationController
     @brain = Brain.new(brain_params)
     @brain.icon_path = @brain.set_icon_path
     # @brain.user = current_user
+    @brain.user = current_user
 
     if @brain.save
       redirect_to @brain, notice: 'Brain was successfully created.'

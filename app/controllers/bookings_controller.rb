@@ -7,13 +7,11 @@ class BookingsController < ApplicationController
   end
 
   def calculate_total
-    @first_date = Date.new(params[:booking]["start_date(1i)"], params[:booking]["start_date(2i)"], params[:booking]["start_date(3i)"])
-    @second_date = Date.new(params[:booking]["end_date(1i)"], params[:booking]["end_date(2i)"], params[:booking]["end_date(3i)"])
+    @first_date = Date.new(params[:booking]["start_date(1i)"].to_i, params[:booking]["start_date(2i)"].to_i, params[:booking]["start_date(3i)"].to_i)
+    @second_date = Date.new(params[:booking]["end_date(1i)"].to_i, params[:booking]["end_date(2i)"].to_i, params[:booking]["end_date(3i)"].to_i)
     @total_of_days = (@second_date - @first_date).to_i
-    @total = @total_of_days * brain.price_per_minute
+    @total = @total_of_days * @brain.price_per_minute * 1440
   end
-
-
 
   def create
     @booking = Booking.new(booking_params)
@@ -21,8 +19,10 @@ class BookingsController < ApplicationController
     @brain = Brain.find(params[:brain_id])
     @booking.brain = @brain
     @booking.user = current_user
-    params[booking(:start_date)]
-    raise
+    @booking.total = calculate_total
+    @booking.start_date = @first_date
+    @booking.end_date = @second_date
+    @booking.availability = false
     @booking.save
     redirect_to brain_path(@brain)
   end
