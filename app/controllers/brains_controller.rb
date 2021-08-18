@@ -19,7 +19,7 @@ class BrainsController < ApplicationController
   # POST /brains
   def create
     @brain = Brain.new(brain_params)
-    # @brain.user = current_user
+    @brain.user = current_user
 
     if @brain.save
       redirect_to @brain, notice: 'Brain was successfully created.'
