@@ -22,9 +22,11 @@ ActiveStorage.start()
 // External imports
 import "bootstrap";
 
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-const canvas = document.querySelector("canvas");
+
+const canvas = document.querySelector(".bg");
 const sandbox = new GlslCanvas(canvas);
 
 const frag = `
@@ -95,6 +97,7 @@ void main(void)
     gl_FragColor = color;
 }
 `
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here

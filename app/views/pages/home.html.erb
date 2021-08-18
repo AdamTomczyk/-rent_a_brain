@@ -1,6 +1,6 @@
 <div class="home">
 
- <canvas width='1000px' height='1200px'></canvas>
+ <canvas class="bg" width='1000px' height='1200px'></canvas>
 
 <div class="wrapper">
   <div class="container">
@@ -20,17 +20,16 @@
     <div class="row mb-5" style="z-index: 99; position: relative;">
         <div class="col-12" id="navbar">
             <div class="d-flex align-items-center">
-            <div class="mr-auto "><%= image_tag "logo4.png", alt: "Le Wagon", width: 50 %></div>
-            <div class="p-5"><h6>Brainz</h6></div>
-            <div class="p-5"><h6>About Us</h6></div>
-            <div class="p-5"><h6>Log In</h6></div>
+            <div class="mr-auto "><%= image_tag "Brain_logo_white.png", alt: "Le Wagon", width: 60 %></div>
+            <div class="p-5"><%= link_to brains_path do %> <h6 style="color:white">Brainz </h6><% end %> </div>
+            <div class="p-5"><%= link_to brains_path do %><h6 style="color:white">About Us</h6><% end %></div>
+            <div class="p-5"><%= link_to brains_path do %><h6 style="color:white">Log In</h6><% end %></div>
         </div>
       </div>
 
 
 
     </div>
-
 
 
 </div>
