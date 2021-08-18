@@ -17,7 +17,7 @@ Brain.destroy_all
 
 user1 = User.create!(
   email: "adam@rentabrain.com",
-  fullname: "Adam Tomczyk",
+  fullname: "Orange King",
   password: "adam123"
 )
 
@@ -28,5 +28,6 @@ Brain.create!(
   eq: 30,
   price_per_minute: 1300,
   rating: 3,
-  user_id: user1.id
+  user_id: user_1.id
+
 )
