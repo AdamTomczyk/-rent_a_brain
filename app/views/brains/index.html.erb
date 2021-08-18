@@ -1,4 +1,7 @@
 <%= render "shared/navbar" %>
+<% if current_user %>
+<%= current_user.fullname %>
+<% end %>
 
 <div class="container">
   <div class="row">
