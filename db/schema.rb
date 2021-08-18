@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2021_08_17_121940) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.float "rating"
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_brains_on_user_id"
   end
 
