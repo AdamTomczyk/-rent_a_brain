@@ -6,11 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-#User.destroy_all
+
+# User.destroy_all
+
 Brain.destroy_all
 # create users
 
-#User.create!()
+# User.create!()
 
 # User.all iteration
 
@@ -19,6 +21,7 @@ Brain.destroy_all
   fullname: "Adam Tomczyk",
   password: "adam123"
 )
+
 
   Brain.create!(
   name: "Johann",
