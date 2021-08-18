@@ -1,12 +1,11 @@
 <%= render "shared/navbar" %>
-<% if current_user %>
-<%= current_user.fullname %>
-<% end %>
+
 
 <div class="container">
   <div class="row">
     <div class="col-12 d-flex align-items-end flex-column">
-      <h1 class="mr-auto mt-5 mb-5" style="color:black">Hey current user, here are all your bookings 🧠 🧠 🧠</h1>
+      <h1 class="mr-auto mt-5 mb-5" style="color:black">Hey <% if current_user %>
+<%= current_user.fullname %><%end%>, <br>here are all your bookings 🧠 🧠 🧠</h1>
     </div>
   </div>
 
@@ -18,13 +17,14 @@
 
   <div class="row">
     <% @bookings.each do |booking|  %>
-          <div class="col-3 p-4 mb-5"  id="genius_card" >
+          <div class="col-6 p-4 mb-5"  id="genius_card" >
             <%= image_tag "brain_icon_passive", alt: "Le Wagon", width: 200 %>
-            <div class="space_flex mb-3">
+
               <h5 class="pl-1">Your total is <%= booking.total %> ₿</h5>
             <h5 class="pl-1 ">Start Date:<%= booking.start_date %></h5>
+
             <h5 class="pl-1 ">End Date:<%= booking.end_date %></h5>
-</div>
+
           </div>
           <div class="col-1"></div>
           </div>
