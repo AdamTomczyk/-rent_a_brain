@@ -4,10 +4,6 @@
   height: 100vh;
   position: relative;
   display: flex;
-}
-
-
-body{
   overflow: hidden;
 }
 
@@ -27,7 +23,7 @@ body{
   position: absolute;
   display: flex;
   justify-content: center;
-
+  overflow: hidden;
   flex-direction: column;
 }
 
