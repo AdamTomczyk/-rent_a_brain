@@ -20,6 +20,11 @@
 
     </div>
   </div>
+
+
+
+
+
     <div class="row">
       <% @brains.each do |brain|  %>
         <%= link_to brain_path(brain) do %>
@@ -29,6 +34,7 @@
           <div class="space_flex mb-3">
             <h5 class="pl-1"><%= brain.price_per_minute %> ₿</h5>
             <h5 class="pl-1 "><%= brain.iq %> IQ</h5>
+
           </div>
         <% end %>
         </div>

@@ -1,5 +1,9 @@
 
-<%= simple_form_for(@brain) do |f| %>
+</div class="container">
+
+  <div class="row">
+    </div class="col-12">
+      <%= simple_form_for(@brain) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
@@ -27,3 +31,8 @@
     <%= f.button :submit %>
   </div>
 <% end %>
+
+    </div>
+  </div>
+
+</div>
