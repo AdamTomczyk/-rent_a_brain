@@ -15,7 +15,7 @@ Brain.destroy_all
 
 # User.all iteration
 
-user1 = User.create!(
+  user_1 = User.create!(
   email: "adam@rentabrain.com",
   fullname: "Orange King",
   password: "adam123"
