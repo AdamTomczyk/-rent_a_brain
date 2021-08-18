@@ -19,6 +19,7 @@ class BrainsController < ApplicationController
   # POST /brains
   def create
     @brain = Brain.new(brain_params)
+    @brain.icon_path = @brain.set_icon_path
     # @brain.user = current_user
 
     if @brain.save
