@@ -1,12 +1,11 @@
 <%= render "shared/navbar" %>
-<% if current_user %>
-<%= current_user.fullname %>
-<% end %>
+
 
 <div class="container">
   <div class="row">
     <div class="col-12 d-flex align-items-end flex-column">
-      <h1 class="mr-auto mt-5 mb-5" style="color:black">Hey current user, here are all your bookings 🧠 🧠 🧠</h1>
+      <h1 class="mr-auto mt-5 mb-5" style="color:black">Hey <% if current_user %>
+<%= current_user.fullname %><%end%>, <br>here are all your bookings 🧠 🧠 🧠</h1>
     </div>
   </div>
 </div>
@@ -41,6 +40,7 @@
 
 
   <div class="row">
+
     <h3>incoming bookings</h3>
     <% @incoming_bookings.each do |booking|  %>
       <% if booking.pending %>
@@ -49,8 +49,11 @@
           <%= image_tag "brain_icon_passive", alt: "Le Wagon", width: 200 %>
           <div class="space_flex mb-3">
             <h5 class="pl-1">The total is <%= booking.total %> ₿</h5>
+
             <h5 class="pl-1 ">Start Date:<%= booking.start_date %></h5>
+
             <h5 class="pl-1 ">End Date:<%= booking.end_date %></h5>
+
           </div>
           <div class="space_flex mb-3">
             <%= link_to "(accept ✅)", accept_booking_path(booking), method: :patch %>
