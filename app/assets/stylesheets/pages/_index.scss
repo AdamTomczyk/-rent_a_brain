@@ -12,6 +12,7 @@ html, body{
   color: white;
   transition-timing-function: ease-in-out;
   transition: 1s;
+  min-width: 400px;
 
 .space_flex{
   display: flex;

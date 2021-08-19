@@ -8,11 +8,6 @@
 
 User.destroy_all
 Brain.destroy_all
-# create users
-
-# User.create!()
-
-# User.all iteration
 
   user_1 = User.create!(
   email: "adam@rentabrain.com",

@@ -8,7 +8,31 @@
 <%= current_user.fullname %><%end%>, <br>here are all your bookings 🧠 🧠 🧠</h1>
     </div>
   </div>
+</div>
 
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <h3>outgoing bookings</h3>
+    <% @outgoing_bookings.each do |booking|  %>
+      <div class="col-3 p-4 mb-5"  id="genius_card" >
+        <%= image_tag "brain_icon_passive", alt: "Le Wagon", width: 200 %>
+          <div class="space_flex mb-3">
+            <h5 class="pl-1">Your total is <%= booking.total %> ₿</h5>
+            <h5 class="pl-1 ">Start Date:<%= booking.start_date %></h5>
+            <h5 class="pl-1 ">End Date:<%= booking.end_date %></h5>
+            <h5 class="pl-1 ">
+              <% if booking.pending?%>
+                <h5>Your booking request is currently being processed.</h5>
+                <% else %>
+                <h5>Your booking got <%= booking.status %>!</h5>
+              <% end %>
+          </div>
+      </div>
+
+      <div class="col-1"></div>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <div class="container mt-5 mb-5">
@@ -16,17 +40,39 @@
 
 
   <div class="row">
-    <% @bookings.each do |booking|  %>
-          <div class="col-6 p-4 mb-5"  id="genius_card" >
-            <%= image_tag "brain_icon_passive", alt: "Le Wagon", width: 200 %>
 
-              <h5 class="pl-1">Your total is <%= booking.total %> ₿</h5>
+    <h3>incoming bookings</h3>
+    <% @incoming_bookings.each do |booking|  %>
+      <% if booking.pending %>
+
+        <div class="col-3 p-4 mb-5"  id="genius_card" >
+          <%= image_tag "brain_icon_passive", alt: "Le Wagon", width: 200 %>
+          <div class="space_flex mb-3">
+            <h5 class="pl-1">The total is <%= booking.total %> ₿</h5>
+
             <h5 class="pl-1 ">Start Date:<%= booking.start_date %></h5>
 
             <h5 class="pl-1 ">End Date:<%= booking.end_date %></h5>
 
           </div>
-          <div class="col-1"></div>
+          <div class="space_flex mb-3">
+            <%= link_to "(accept ✅)", accept_booking_path(booking), method: :patch %>
+            <%= link_to "(reject ❌)", reject_booking_path(booking), method: :patch %> <%#= by default link is get request, need to make this patch %>
           </div>
+        </div>
+
+      <% else %>
+        <div class="col-3 p-4 mb-5"  id="genius_card" >
+          <%= image_tag "brain_icon_passive", alt: "Le Wagon", width: 200 %>
+          <div class="space_flex mb-3">
+            <h5 class="pl-1">Your confirmed booking will take place:</h5>
+            <h5 class="pl-1 ">Start Date:<%= booking.start_date %></h5>
+            <h5 class="pl-1 ">End Date:<%= booking.end_date %></h5>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="col-1"></div>
+      </div>
     <% end %>
   </div>
