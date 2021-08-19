@@ -8,18 +8,13 @@
 
 User.destroy_all
 Brain.destroy_all
-# create users
-
-# User.create!()
-
-# User.all iteration
 
   user_1 = User.create!(
   email: "adam@rentabrain.com",
   fullname: "Orange King",
   password: "adam123"
 )
- 
+
 Brain.create!(
   name: "Johann Goethe",
   description: "Johann Goethe was a German polymath who lived in the 1800s and his estimated IQ score ranged from 210 to 225. founded the science of human chemistry and developed an early theory of evolution. To make him more of a Jack-of-all-trades, he is considered one of the greatest figures in Western literature. His poetic drama titled “Faust” was published in 1808 and it is still read and studied today.",

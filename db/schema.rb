@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_18_103340) do
+ActiveRecord::Schema.define(version: 2021_08_19_152431) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +24,8 @@ ActiveRecord::Schema.define(version: 2021_08_18_103340) do
     t.integer "total"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "status", default: 0
+    t.boolean "pending"
     t.index ["brain_id"], name: "index_bookings_on_brain_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -37,6 +40,7 @@ ActiveRecord::Schema.define(version: 2021_08_18_103340) do
     t.datetime "updated_at", precision: 6, null: false
     t.float "rating"
     t.bigint "user_id", null: false
+    t.string "image"
     t.string "icon_path"
     t.index ["user_id"], name: "index_brains_on_user_id"
   end
