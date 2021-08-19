@@ -28,7 +28,7 @@
       <% @brains.each do |brain|  %>
         <%= link_to brain_path(brain) do %>
           <div class="col-3 p-4 mb-5" id="genius_card" >
-          <%= image_tag "#{brain.icon_path}.png", alt: "Le Wagon", width: 90 %>
+          <%= image_tag "#{brain.icon_path}", alt: "Le Wagon", width: 90 %>
           <h5 class="text-start pl-1 mt-5 mb-2"><%= link_to brain.name, brain_path(brain) %></h5>
           <div class="space_flex mb-3">
             <h5 class="pl-1"><%= brain.price_per_minute %> ₿</h5>
