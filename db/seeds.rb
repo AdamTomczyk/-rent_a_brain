@@ -16,10 +16,10 @@ Brain.destroy_all
 
   user_1 = User.create!(
   email: "adam@rentabrain.com",
-  fullname: "Orange King",
+  fullname: "Orange Dau",
   password: "adam123"
 )
- 
+
 Brain.create!(
   name: "Johann Goethe",
   description: "Johann Goethe was a German polymath who lived in the 1800s and his estimated IQ score ranged from 210 to 225. founded the science of human chemistry and developed an early theory of evolution. To make him more of a Jack-of-all-trades, he is considered one of the greatest figures in Western literature. His poetic drama titled “Faust” was published in 1808 and it is still read and studied today.",
@@ -28,7 +28,7 @@ Brain.create!(
   price_per_minute: 277,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_01"
+  icon_path: "brain_icons/Brain_icon_1"
 )
 
 Brain.create!(
@@ -39,7 +39,7 @@ Brain.create!(
   price_per_minute: 270,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_02"
+  icon_path: "brain_icons/Brain_icon_2"
 )
 
 Brain.create!(
@@ -50,7 +50,7 @@ Brain.create!(
   price_per_minute: 277,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_03"
+  icon_path: "brain_icons/Brain_icon_3"
 )
 
 Brain.create!(
@@ -61,7 +61,7 @@ Brain.create!(
   price_per_minute: 270,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_04"
+  icon_path: "brain_icons/Brain_icon_4"
 )
 
 Brain.create!(
@@ -72,7 +72,7 @@ Brain.create!(
   price_per_minute: 350,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_05"
+  icon_path: "brain_icons/Brain_icon_5"
 )
 
 Brain.create!(
@@ -83,7 +83,7 @@ Brain.create!(
   price_per_minute: 385,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_06"
+  icon_path: "brain_icons/Brain_icon_6"
 )
 
 Brain.create!(
@@ -94,7 +94,7 @@ Brain.create!(
   price_per_minute: 365,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_07"
+  icon_path: "brain_icons/Brain_icon_7"
 )
 
 Brain.create!(
@@ -105,7 +105,7 @@ Brain.create!(
   price_per_minute: 325,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_08"
+  icon_path: "brain_icons/Brain_icon_8"
 )
 
 Brain.create!(
@@ -116,7 +116,7 @@ Brain.create!(
   price_per_minute: 365,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_09"
+  icon_path: "brain_icons/Brain_icon_9"
 )
 
 Brain.create!(

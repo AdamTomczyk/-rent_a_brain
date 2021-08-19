@@ -6,6 +6,6 @@ class Brain < ApplicationRecord
   before_create :set_icon_path
 
   def set_icon_path
-    return "brain_icons/Brain_icon_#{(1..12).to_a.sample}"
+    @icon_path = "brain_icons/Brain_icon_#{(1..9).to_a.sample}"
   end
 end
