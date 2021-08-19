@@ -2,7 +2,11 @@ class BrainsController < ApplicationController
   before_action :set_brain, only: [:show, :edit, :update, :destroy]
 
   def index
-    @brains = Brain.all
+    if params[:query].present?
+      @brains = Brain.where(category: params[:query])
+    else
+      @brains = Brain.all
+    end
   end
 
   def show
@@ -52,6 +56,6 @@ class BrainsController < ApplicationController
   end
 
   def brain_params
-    params.require(:brain).permit(:name, :description, :eq, :iq, :price_per_minute)
+    params.require(:brain).permit(:name, :category, :description, :eq, :iq, :price_per_minute)
   end
 end
