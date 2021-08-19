@@ -5,7 +5,7 @@
       <h1 class="mb-5" style="color:black">Create a new brain</h1>
       <%= simple_form_for @brain do |f| %>
         <%= f.input :name %>
-        <%= f.input :category, :collection => %w[Heros Sports Science Phylosophy EvilMinds Saviours Arts T.A's] %>
+        <%= f.input :category, :collection => %w[Heros Sports Science Philosophy EvilMinds Saviours Arts T.A's] %>
         <%= f.input :description %>
         <%= f.input :price_per_minute %>
         <%= f.input :iq %>
