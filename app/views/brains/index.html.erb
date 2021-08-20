@@ -19,7 +19,7 @@
 <div class="d-flex bd-highlight align-items-center">
 
   <div class="mr-auto p-2 bd-highlight"><%= link_to "Create a new Brain", new_brain_path %></div>
-   <div class="p-2 bd-highlight"> <%= form_tag brains_path, method: :get do %>
+   <div class="p-2 bd-highlight mr-5"> <%= form_tag brains_path, method: :get do %>
       <%= select_tag(:query, options_for_select(Brain::CATEGORY, params[:query]))  %>
       <%= submit_tag "Select", class: "btn btn-link" %>
     <% end %></div>
