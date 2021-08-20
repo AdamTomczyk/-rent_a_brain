@@ -11,7 +11,7 @@ Brain.destroy_all
 
   user_1 = User.create!(
   email: "adam@rentabrain.com",
-  fullname: "Orange Dau",
+  fullname: "Georgie",
   password: "adam123"
 )
 
@@ -172,4 +172,16 @@ Brain.create!(
   user_id: user_1.id,
   icon_path: "brain_icons/Brain_icon_12",
   category: "T.A's"
+)
+
+Brain.create!(
+  name: "Donald J Trump",
+  description: "Born and raised in Queens, New York City, Trump graduated from the University of Pennsylvania with a bachelor's degree in 1968. He became the president of his father Fred Trump's real estate business in 1971 and renamed it The Trump Organization. Trump expanded the company's operations to building and renovating skyscrapers, hotels, casinos, and golf courses. He later started various side ventures, mostly by licensing his name. Trump and his businesses have been involved in more than 4,000 state and federal legal actions, including six bankruptcies. He owned the Miss Universe brand of beauty pageants from 1996 to 2015. From 2003 to 2015, he co-produced and hosted the reality television series The Apprentice. Love the wrong ruby",
+  iq: 20,
+  eq: 10,
+  price_per_minute: 0.2,
+  rating: 3,
+  user_id: user_1.id,
+  icon_path: "brain_icons/Brain_icon_1",
+  category: "Saviours"
 )
