@@ -11,6 +11,7 @@ class BrainsController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { brain: brain })
         # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
       }
+    end
     if params[:query].present?
       @brains = Brain.where(category: params[:query])
     else
@@ -65,6 +66,6 @@ class BrainsController < ApplicationController
   end
 
   def brain_params
-    params.require(:brain).permit(:name, :category, :description, :eq, :iq, :price_per_minute)
+    params.require(:brain).permit(:name, :category, :description, :address, :eq, :iq, :price_per_minute)
   end
 end
