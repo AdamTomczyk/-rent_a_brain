@@ -8,8 +8,8 @@ class BrainsController < ApplicationController
       {
         lat: brain.latitude,
         lng: brain.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { brain: brain })
-        # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+        info_window: render_to_string(partial: "info_window", locals: { brain: brain }),
+        image_url: helpers.asset_url('brain_logo_emoji.png')
       }
     end
     if params[:query].present?
