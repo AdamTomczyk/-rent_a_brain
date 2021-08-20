@@ -2,7 +2,11 @@ class BookingsController < ApplicationController
   require "date"
 
   def index
-    @bookings = Booking.where(user_id: current_user)
+    @outgoing_bookings = Booking.where(user: current_user) # bookings i made
+    if current_user.brains.any? # checking if user is host of brains
+      @my_brains = current_user.brains # returns collection of brains
+      @incoming_bookings = Booking.where(brain_id: @my_brains.pluck(:id))
+    end
   end
 
   def new
@@ -29,6 +33,23 @@ class BookingsController < ApplicationController
     @booking.end_date = @second_date
     @booking.availability = false
     @booking.save
+    @booking.pending = true
+    redirect_to bookings_path
+  end
+
+  def accept
+    @booking = Booking.find(params[:id])
+    @booking.accepted!
+    @booking.pending = false
+    @booking.status = 1
+    redirect_to bookings_path
+  end
+
+  def reject
+    @booking = Booking.find(params[:id])
+    @booking.rejected!
+    @booking.pending = false
+    @booking.status = 2
     redirect_to bookings_path
   end
 

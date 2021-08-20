@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2021_08_19_115138) do
     t.integer "total"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "status", default: 0
+    t.boolean "pending"
     t.index ["brain_id"], name: "index_bookings_on_brain_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -42,6 +44,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_115138) do
     t.float "latitude"
     t.float "longitude"
     t.string "address"
+    t.string "category"
     t.index ["user_id"], name: "index_brains_on_user_id"
   end
 

@@ -8,11 +8,6 @@
 
 User.destroy_all
 Brain.destroy_all
-# create users
-
-# User.create!()
-
-# User.all iteration
 
   user_1 = User.create!(
   email: "adam@rentabrain.com",
@@ -29,7 +24,8 @@ Brain.create!(
   price_per_minute: 277,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_1"
+  icon_path: "brain_icons/Brain_icon_1",
+  category: "Arts"
 )
 
 Brain.create!(
@@ -41,7 +37,8 @@ Brain.create!(
   price_per_minute: 270,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_2"
+  icon_path: "brain_icons/Brain_icon_2",
+  category: "Arts"
 )
 
 Brain.create!(
@@ -53,7 +50,8 @@ Brain.create!(
   price_per_minute: 277,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_3"
+  icon_path: "brain_icons/Brain_icon_3",
+  category: "Science"
 )
 
 Brain.create!(
@@ -64,7 +62,8 @@ Brain.create!(
   price_per_minute: 270,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_4"
+  icon_path: "brain_icons/Brain_icon_4",
+  category: "Science"
 )
 
 Brain.create!(
@@ -75,7 +74,8 @@ Brain.create!(
   price_per_minute: 350,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_5"
+  icon_path: "brain_icons/Brain_icon_5",
+  category: "Science"
 )
 
 Brain.create!(
@@ -86,7 +86,8 @@ Brain.create!(
   price_per_minute: 385,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_6"
+  icon_path: "brain_icons/Brain_icon_6",
+  category: "Science"
 )
 
 Brain.create!(
@@ -97,7 +98,8 @@ Brain.create!(
   price_per_minute: 365,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_7"
+  icon_path: "brain_icons/Brain_icon_7",
+  category: "Science"
 )
 
 Brain.create!(
@@ -108,7 +110,8 @@ Brain.create!(
   price_per_minute: 325,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_8"
+  icon_path: "brain_icons/Brain_icon_8",
+  category: "Philosophy"
 )
 
 Brain.create!(
@@ -119,7 +122,8 @@ Brain.create!(
   price_per_minute: 365,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_9"
+  icon_path: "brain_icons/Brain_icon_9",
+  category: "Science"
 )
 
 Brain.create!(
@@ -130,7 +134,8 @@ Brain.create!(
   price_per_minute: 370,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_10"
+  icon_path: "brain_icons/Brain_icon_10",
+  category: "Science"
 )
 
 Brain.create!(
@@ -141,7 +146,8 @@ Brain.create!(
   price_per_minute: 340,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_11"
+  icon_path: "brain_icons/Brain_icon_11",
+  category: "Philosophy"
 )
 
 Brain.create!(
@@ -152,5 +158,18 @@ Brain.create!(
   price_per_minute: 350,
   rating: 3,
   user_id: user_1.id,
-  icon_path: "brain_icons/Brain_icon_12"
+  icon_path: "brain_icons/Brain_icon_12",
+  category: "Science"
+)
+
+Brain.create!(
+  name: "Ada Lovelace",
+  description: "English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise that the machine had applications beyond pure calculation, and to have published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first computer programmer. LOVED RUBY!",
+  iq: 300,
+  eq: 160,
+  price_per_minute: 700,
+  rating: 3,
+  user_id: user_1.id,
+  icon_path: "brain_icons/Brain_icon_12",
+  category: "T.A's"
 )
