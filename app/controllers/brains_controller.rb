@@ -2,6 +2,15 @@ class BrainsController < ApplicationController
   before_action :set_brain, only: [:show, :edit, :update, :destroy]
 
   def index
+    @brains = Brain.all
+    # the `geocoded` scope filters only brains with coordinates (latitude & longitude)
+    @markers = @brains.geocoded.map do |brain|
+      {
+        lat: brain.latitude,
+        lng: brain.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { brain: brain })
+        # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+      }
     if params[:query].present?
       @brains = Brain.where(category: params[:query])
     else

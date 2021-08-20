@@ -3,6 +3,8 @@ class Brain < ApplicationRecord
   belongs_to :user
   has_many :reviews, dependent: :destroy
   has_many :bookings
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
   before_create :set_icon_path
   CATEGORY = ["Heros", "Sports", "Science", "Philosophy", "EvilMinds", "Saviours", "Arts", "T.A's"]
 

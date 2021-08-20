@@ -18,6 +18,7 @@ Brain.destroy_all
 Brain.create!(
   name: "Johann Goethe",
   description: "Johann Goethe was a German polymath who lived in the 1800s and his estimated IQ score ranged from 210 to 225. founded the science of human chemistry and developed an early theory of evolution. To make him more of a Jack-of-all-trades, he is considered one of the greatest figures in Western literature. His poetic drama titled “Faust” was published in 1808 and it is still read and studied today.",
+  address: "Empire State Building",
   iq: 217,
   eq: 60,
   price_per_minute: 277,
@@ -30,6 +31,7 @@ Brain.create!(
 Brain.create!(
   name: "Leonardo Da Vinci",
   description: "Celebrated painter with works like the Mona Lisa and The Last Supper, Leonardo Da Vinci is one of the most celebrated geniuses ever to live. With an estimated IQ score ranging from 180 to 220, he was also able to create technological innovations like flying machines, armored vehicles, and adding machines.",
+  address: "Checkpoint Charlie",
   iq: 200,
   eq: 70,
   price_per_minute: 270,
@@ -42,6 +44,7 @@ Brain.create!(
 Brain.create!(
   name: "James Maxwell",
   description: "Having an estimated IQ score ranging from 190 to 205, James Maxwell was a mathematical physicist from Scotland. He’s best known for creating the classical theory of electromagnetic radiation. When Einstein was questioned if he had stood on the shoulders of Issac Newton to reach success, Einstein replied: “No, I stand on Maxwell’s shoulders.”",
+  address: "Tour Eiffel",
   iq: 197,
   eq: 80,
   price_per_minute: 277,
