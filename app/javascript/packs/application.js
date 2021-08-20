@@ -32,6 +32,7 @@ import "chartkick/chart.js"
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
+function canvas () {
 const canvas = document.querySelector(".bg");
 const sandbox = new GlslCanvas(canvas);
 
@@ -103,11 +104,13 @@ void main(void)
     gl_FragColor = color;
 }
 `
+  sandbox.load(frag);
+  sandbox.setUniform("image", "https://images.unsplash.com/photo-1623578982323-8443de4140ae?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3582&q=80")
+}
 
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
-  sandbox.load(frag);
-  sandbox.setUniform("image", "https://images.unsplash.com/photo-1623578982323-8443de4140ae?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3582&q=80")
   initMapbox();
+  canvas();
 });
