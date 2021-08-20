@@ -96,7 +96,7 @@
           </div>
           <div class="space_flex mb-3">
             <%#= link_to "(accept ✅)", accept_booking_path(booking), method: :patch %>
-            <%#= link_to "(reject ❌)", reject_booking_path(booking), method: :patch %> <%= by default link is get request, need to make this patch %>
+            <%#= link_to "(reject ❌)", reject_booking_path(booking), method: :patch %> <%#= by default link is get request, need to make this patch %>
           </div>
         </div>
 
@@ -109,7 +109,7 @@
             <h5 class="pl-1 ">End Date:<%= booking.end_date %></h5>
           </div>
         </div>
-      <% end %>
+      <%# end %>
 
       <div class="col-1"></div>
       </div>
