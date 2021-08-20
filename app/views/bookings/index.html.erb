@@ -16,7 +16,8 @@
       <% @outgoing_bookings.each do |booking|  %>
           <div class="col-3 p-4 mb-5" id="genius_card" >
           <%= image_tag "#{booking.brain.icon_path}.png", alt: "Le Wagon", width: 90 %>
-            <h5 class="pl-1 mt-5 mb-4">Your Total:<br> <%= booking.total %> ₿</h5>
+          <h5 class="pl-1 mt-5"><%= booking.brain.name %> </h5>
+            <h5 class="pl-1 mt-5 mb-4">Your Total<br> <%= booking.total %> ₿</h5>
             <h5 class="pl-1 mb-4"> <%= image_tag "shuttle.png", alt: "Start", width: 20 %>&nbsp; &nbsp; <%= booking.start_date.strftime("%B %d") %></h5>
              <h5 class="pl-1"> <%= image_tag "end.png", alt: "Start", width: 20 %>&nbsp; &nbsp; <%= booking.end_date.strftime("%B %d") %></h5>
 
