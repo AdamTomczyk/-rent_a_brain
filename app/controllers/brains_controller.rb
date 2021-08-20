@@ -3,6 +3,15 @@ class BrainsController < ApplicationController
 
   def index
     @brains = Brain.all
+    # the `geocoded` scope filters only brains with coordinates (latitude & longitude)
+    @markers = @brains.geocoded.map do |brain|
+      {
+        lat: brain.latitude,
+        lng: brain.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { brain: brain })
+        # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+      }
+    end
   end
 
   def show

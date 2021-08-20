@@ -19,10 +19,16 @@ ActiveStorage.start()
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 
+// MAPBOX
+// internal imports
+import { initMapbox } from '../plugins/init_mapbox';
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})
+
 // External imports
 import "bootstrap";
 import "chartkick/chart.js"
-
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
