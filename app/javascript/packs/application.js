@@ -22,9 +22,7 @@ ActiveStorage.start()
 // MAPBOX
 // internal imports
 import { initMapbox } from '../plugins/init_mapbox';
-document.addEventListener('turbolinks:load', () => {
-  initMapbox();
-})
+
 
 
 // External imports
@@ -106,21 +104,10 @@ void main(void)
 }
 `
 
-function reload() {
-
-  const home = document.querySelector(".homeboy");
-  console.log(home)
-  home.addEventListener("click", ()=> {
-    window.location.href = "/"
-  })
-}
-
-
-
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   sandbox.load(frag);
   sandbox.setUniform("image", "https://images.unsplash.com/photo-1623578982323-8443de4140ae?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3582&q=80")
-  reload()
+  initMapbox();
 });
