@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :brains do
     resources :reviews, only: [:create]
-    resources :bookings, only: [:create, :new]
+    resources :bookings, only: [:create, :new, :show]
   end
 
-  resources :bookings, only: [:index, :delete, :show] do
+  resources :bookings, only: [:index, :delete] do
     member do
       patch "accept"
       patch "reject"

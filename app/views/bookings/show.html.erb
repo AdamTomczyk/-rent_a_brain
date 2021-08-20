@@ -1,0 +1,8 @@
+<%= render "shared/navbar" %>
+<h2>Bookings</h2>
+</div>
+  <div class="space_flex mb-3">
+      <%= link_to "(accept ✅)", accept_booking_path(@booking), method: :patch %>
+      <%= link_to "(reject ❌)", reject_booking_path(@booking), method: :patch %> <%#= by default link is get request, need to make this patch %>
+  </div>
+</div>
