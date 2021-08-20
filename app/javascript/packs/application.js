@@ -26,6 +26,7 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
 })
 
+
 // External imports
 import "bootstrap";
 import "chartkick/chart.js"
