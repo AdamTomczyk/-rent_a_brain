@@ -10,6 +10,38 @@
   </div>
 </div>
 
+<div class="container">
+  <div class="row">
+      <% @outgoing_bookings.each do |booking|  %>
+          <div class="col-3 p-4 mb-5" id="genius_card" >
+          <%= image_tag "#{booking.brain.icon_path}", alt: "Le Wagon", width: 90 %>
+            <h5 class="pl-1 mt-5 mb-4">Your Total is <%= booking.total %> ₿</h5>
+            <h5 class="pl-1 mb-4"> Starts: <%= booking.start_date.strftime("%B %d") %></h5>
+             <h5 class="pl-1"> Ends: &nbsp; <%= booking.end_date.strftime("%B %d") %></h5>
+
+        </div>
+        <div class="col-1"></div>
+      <% end %>
+  </div>
+</div>
+
+<!--
+<div class="container">
+  <div class="row">
+     <h3>outgoing bookings</h3>
+      <% @outgoing_bookings.each do |booking|  %>
+        <div class="col-3"  id="genius_card" >
+          <%= image_tag "brain_icon_passive", alt: "Le Wagon", width: 200 %>
+            <div class="space_flex mb-3">
+              <h5 class="pl-1">Your total is <%= booking.total %> ₿</h5>
+              <h5 class="pl-1 ">Start Date:<%= booking.start_date %></h5>
+              <h5 class="pl-1 ">End Date:<%= booking.end_date %></h5>
+            </div>
+        </div>
+      <% end %>
+  </div>
+</div>
+
 <div class="container mt-5 mb-5">
   <div class="row">
     <h3>outgoing bookings</h3>
@@ -76,3 +108,4 @@
       </div>
     <% end %>
   </div>
+ -->
