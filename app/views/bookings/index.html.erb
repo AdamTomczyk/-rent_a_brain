@@ -51,6 +51,7 @@
   <div class="row">
     <h3>outgoing bookings</h3>
     <% @outgoing_bookings.each do |booking|  %>
+  <%= link_to brain_booking_path(booking.brain, booking) do %>
       <div class="col-3 p-4 mb-5"  id="genius_card" >
         <%= image_tag "brain_icon_passive", alt: "Le Wagon", width: 200 %>
           <div class="space_flex mb-3">
@@ -68,6 +69,7 @@
 
       <div class="col-1"></div>
       </div>
+    <% end %>
     <% end %>
   </div>
 </div>

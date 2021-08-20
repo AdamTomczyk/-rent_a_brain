@@ -24,7 +24,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    # we need `restaurant_id` to associate review with corresponding restaurant
+    # we need `brain_id` to associate review with corresponding restaurant
     @brain = Brain.find(params[:brain_id])
     @booking.brain = @brain
     @booking.user = current_user
@@ -35,6 +35,15 @@ class BookingsController < ApplicationController
     @booking.save
     @booking.pending = true
     redirect_to bookings_path
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+    @booking = Booking.new
+    @brain = Brain.find(params[:brain_id])
+    @booking.user = current_user
+    @booking.brain = @brain
+
   end
 
   def accept
@@ -56,6 +65,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:content)
+    params.require(:booking).permit(:content, :current_user, :brain_id, :start_date, :end_date, :price, :total)
   end
 end
