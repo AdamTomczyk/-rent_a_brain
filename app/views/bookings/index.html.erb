@@ -38,9 +38,9 @@
         <div class="col-3"  id="genius_card" >
           <%#= image_tag "brain_icon_passive", alt: "Le Wagon", width: 200 %>
             <div class="space_flex mb-3">
-              <h5 class="pl-1">Your total is <%= booking.total %> ₿</h5>
-              <h5 class="pl-1 ">Start Date:<%= booking.start_date %></h5>
-              <h5 class="pl-1 ">End Date:<%= booking.end_date %></h5>
+              <h5 class="pl-1">Your total is <%#= booking.total %> ₿</h5>
+              <h5 class="pl-1 ">Start Date:<%#= booking.start_date %></h5>
+              <h5 class="pl-1 ">End Date:<%#= booking.end_date %></h5>
             </div>
         </div>
       <%# end %>
@@ -55,9 +55,9 @@
       <div class="col-3 p-4 mb-5"  id="genius_card" >
         <%#= image_tag "brain_icon_passive", alt: "Le Wagon", width: 200 %>
           <div class="space_flex mb-3">
-            <h5 class="pl-1">Your total is <%= booking.total %> ₿</h5>
-            <h5 class="pl-1 ">Start Date:<%= booking.start_date %></h5>
-            <h5 class="pl-1 ">End Date:<%= booking.end_date %></h5>
+            <h5 class="pl-1">Your total is <%#= booking.total %> ₿</h5>
+            <h5 class="pl-1 ">Start Date:<%#= booking.start_date %></h5>
+            <h5 class="pl-1 ">End Date:<%#= booking.end_date %></h5>
             <h5 class="pl-1 ">
               <%# if booking.pending?%>
                 <h5>Your booking request is currently being processed.</h5>
@@ -87,11 +87,11 @@
         <div class="col-3 p-4 mb-5"  id="genius_card" >
           <%#= image_tag "brain_icon_passive", alt: "Le Wagon", width: 200 %>
           <div class="space_flex mb-3">
-            <h5 class="pl-1">The total is <%= booking.total %> ₿</h5>
+            <h5 class="pl-1">The total is <%#= booking.total %> ₿</h5>
 
-            <h5 class="pl-1 ">Start Date:<%= booking.start_date %></h5>
+            <h5 class="pl-1 ">Start Date:<%#= booking.start_date %></h5>
 
-            <h5 class="pl-1 ">End Date:<%= booking.end_date %></h5>
+            <h5 class="pl-1 ">End Date:<%#= booking.end_date %></h5>
 
           </div>
           <div class="space_flex mb-3">
@@ -105,8 +105,8 @@
           <%#= image_tag "brain_icon_passive", alt: "Le Wagon", width: 200 %>
           <div class="space_flex mb-3">
             <h5 class="pl-1">Your confirmed booking will take place:</h5>
-            <h5 class="pl-1 ">Start Date:<%= booking.start_date %></h5>
-            <h5 class="pl-1 ">End Date:<%= booking.end_date %></h5>
+            <h5 class="pl-1 ">Start Date:<%#= booking.start_date %></h5>
+            <h5 class="pl-1 ">End Date:<%#= booking.end_date %></h5>
           </div>
         </div>
       <%# end %>
